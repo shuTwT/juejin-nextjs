@@ -1,0 +1,106 @@
+.phoneHide {
+    display: flex;
+
+    .navItem {
+        color: #86909c;
+        font-size: 1.167rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        a {
+            display: inline-block;
+            height: 5rem;
+            margin: 0 1rem;
+            line-height: 5rem;
+        }
+    }
+
+    .navItem.active a {
+        color: #1e80ff;
+        font-weight: 500;
+    }
+}
+
+.phoneShowMenu {
+    cursor: pointer;
+    display: none;
+}
+
+.mainHeaderBox {
+    position: relative;
+    height: 5rem;
+}
+
+.mainHeader {
+    left: 0;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s;
+    transform: translate3d(0, -100%, 0);
+    height: 5rem;
+    border-bottom: 1px solid #f1f1f1;
+    z-index: 250;
+
+    >.container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .logo {
+            display: inline-block;
+            width: auto;
+            height: 22px;
+            margin-left: 24px;
+            margin-right: 1rem;
+
+            .logoImg {
+                display: block;
+                width: 107px;
+                height: 22px;
+            }
+
+            .mobile {
+                display: none;
+                width: 31px;
+            }
+        }
+
+        .mainNav {
+            height: 100%;
+            line-height: normal;
+            display: block;
+
+            .navList {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                flex-direction: row-reverse;
+                height: 100%;
+
+                .mainNavList {
+                    display: flex;
+                }
+
+                .rightSideNav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    position: relative;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.mainHeader.visiable {
+    transform: translateZ(0);
+}

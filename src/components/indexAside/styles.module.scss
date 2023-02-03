@@ -1,0 +1,11 @@
+.indexAside {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+
+@media screen and (max-width:960px) {
+    .indexAside {
+        display: none;
+    }
+}

@@ -1,0 +1,48 @@
+.xituSkeleton {
+    width: 100%;
+    height: auto;
+
+    .xituSkeletonItem {
+        width: 100%;
+
+        .xituSkeletonContent {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            display: block;
+
+            .xituSkeletonLine {
+                height: 15px;
+                background: #aaa;
+                animation: loading 2s ease infinite;
+                margin-top: 1rem;
+            }
+
+            .xituSkeletonLine:first-child {
+                width: 40%;
+            }
+
+            .xituSkeletonLine:nth-child(3) {
+                width: 80%;
+            }
+
+            .xituSkeletonLine:nth-child(4) {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        background-size: 300% 100%;
+        background-image: linear-gradient(100deg, #eee 40%, #fff 50%, #eee 60%);
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-size: 300% 100%;
+        background-image: linear-gradient(100deg, #eee 40%, #fff 50%, #eee 60%);
+        background-position: 0 50%;
+    }
+}

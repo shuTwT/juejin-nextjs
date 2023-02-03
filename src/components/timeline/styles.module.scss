@@ -1,0 +1,58 @@
+.timelineContainer .timelineContent {
+    position: relative;
+    margin-top: .33rem;
+    display: flex;
+
+    .timelineEntryList {
+        display: flex;
+        flex-direction: column;
+        border-radius: 2px;
+        width: 700px;
+        height: 1000px;
+        order: 1;
+        margin-right: 1.667rem;
+
+        .entryListContainer {
+            background-color: #fff;
+
+            .listHeader {
+                padding: 1.3rem 1rem;
+                border-bottom: 1px solid hsla(0, 0%, 59.2%, .1);
+
+                .listNav {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .navList {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        line-height: 1;
+
+                        .navItem {
+                            position: relative;
+                            cursor: pointer;
+                            padding: 0 1.2rem;
+                            border-right: 1px solid hsla(0, 0%, 59.2%, .2);
+                            font-size: 1.17rem;
+
+                            a:hover {
+                                color: #007fff;
+                            }
+                        }
+
+                        .navItem.active a {
+                            color: #007fff;
+                        }
+
+                        .navItem:last-child {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
