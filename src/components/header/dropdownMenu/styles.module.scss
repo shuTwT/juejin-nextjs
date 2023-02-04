@@ -1,0 +1,31 @@
+.menuList {
+    background: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 24px rgb(81 87 103 / 16%);
+    border-radius: 6px;
+}
+
+
+
+
+.menuList .menuItem .itemLink {
+    width: 124px;
+    height: 40px;
+    color: #515767;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    position: relative;
+
+    .itemName {
+        display: inline-block;
+    }
+}
+
+.menuList .menuItem:hover {
+    background: #f7f8fa;
+    border-radius: 4px;
+}

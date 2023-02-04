@@ -34,10 +34,22 @@
     --card-border-rgb: 131, 134, 135;
 }
 
+.light-theme,
+:root {
+    --juejin-background: #f2f3f5;
+    --juejin-font-white: #fff;
+    --juejin-brand-1-normal: #1e80ff;
+    --juejin-font-2: #515767;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
 }
 
 ul,
@@ -52,6 +64,9 @@ body {
     font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial !important;
 }
 
+img {
+    border-style: none;
+}
 
 
 a {
@@ -68,9 +83,31 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+
 .container {
     position: relative;
     margin: 0 auto;
     width: 100%;
     max-width: 960px;
+}
+
+.button,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #007fff;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    padding: 0.5rem 1.3rem;
+    outline: none;
+    transition: background-color .3s, color .3s;
+    cursor: pointer;
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
 }

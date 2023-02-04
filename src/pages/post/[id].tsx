@@ -1,4 +1,3 @@
-import { Context } from "node:vm";
 
 export default function Post(props: any) {
 
@@ -10,7 +9,7 @@ export default function Post(props: any) {
             width={400}
             alt="" /></>)
 }
-export async function getServerSideProps(context: Context) {
+export async function getServerSideProps(context: any) {
     const { id } = context.query;
     const res = await fetch('https://api.vvhan.com/api/acgimg?type=json')
     const json = await res.json()

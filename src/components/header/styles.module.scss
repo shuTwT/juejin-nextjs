@@ -1,28 +1,24 @@
 .phoneHide {
     display: flex;
-
-    .navItem {
-        color: #86909c;
-        font-size: 1.167rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        a {
-            display: inline-block;
-            height: 5rem;
-            margin: 0 1rem;
-            line-height: 5rem;
-        }
-    }
-
-    .navItem.active a {
-        color: #1e80ff;
-        font-weight: 500;
-    }
 }
+
+.navItem {
+    color: #86909c;
+    padding: 0 1rem;
+    font-size: 1.167rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.navItem.active a {
+    color: #1e80ff;
+    font-weight: 500;
+}
+
 
 .phoneShowMenu {
     cursor: pointer;
@@ -51,7 +47,9 @@
         position: relative;
         display: flex;
         align-items: center;
-        width: 100%;
+        height: 100%;
+        margin: auto;
+        max-width: 1440px;
 
         .logo {
             display: inline-block;
@@ -75,14 +73,14 @@
         .mainNav {
             height: 100%;
             line-height: normal;
-            display: block;
+            flex: 1 0 auto;
 
             .navList {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 position: relative;
-                flex-direction: row-reverse;
+                /*flex-direction: row-reverse;*/
                 height: 100%;
 
                 .mainNavList {
@@ -103,4 +101,221 @@
 
 .mainHeader.visiable {
     transform: translateZ(0);
+}
+
+.notification {
+    position: relative;
+    padding-right: 2rem;
+    background-color: #fff;
+}
+
+.navItem.notification {
+    position: relative;
+}
+
+.navItem a {
+    color: var(--juejin-font-2);
+    position: relative;
+}
+
+.navItem.notification {
+    :global(.notificationDropdownMenu) {
+        display: none;
+        position: absolute;
+        left: -120px;
+        top: 58px;
+    }
+}
+
+.navItem.notification:hover {
+    :global(.notificationDropdownMenu) {
+        display: block;
+    }
+}
+
+.searchAdd {
+    flex: 1 1 auto;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchAddUl {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1350px) {
+    .searchAddUl {
+        width: 27.083rem;
+    }
+}
+
+.navItem.search {
+    cursor: auto;
+    padding-left: 0;
+}
+
+.navItem:last-child {
+    padding-right: 0;
+}
+
+.navItem.add {
+    cursor: default;
+    width: 25rem;
+    transition: width .3s;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.navItem.add.creatorItem {
+    overflow: visible;
+    width: 11rem;
+    padding-left: 5px;
+}
+
+.searchForm {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    position: relative;
+    height: 2.834rem;
+    border: 1px solid #c2c8d1;
+    transition: width .2s;
+}
+
+@media screen and (max-width: 1350px) {
+    .searchForm {
+        width: 180px;
+    }
+}
+
+.searchForm .searchInput {
+    border: none;
+    width: calc(100% - 44px);
+    padding: 0.6rem 0 0.6rem 1rem;
+    box-shadow: none;
+    outline: none;
+    font-size: 1.1rem;
+    color: #8a919f;
+    background-color: transparent;
+    transition: width .3s;
+}
+
+.searchForm .searchIconContainer {
+    position: relative;
+    left: -2px;
+    width: 44px;
+    height: 30px;
+    background: var(--juejin-background);
+    border-radius: 2px;
+}
+
+.searchForm .searchIcon {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 1.33rem;
+    padding: 0 0.8333rem 0 0;
+    cursor: pointer;
+    margin: 7px 15px;
+}
+
+.addGroup {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    width: 115px;
+    height: 3rem;
+}
+
+.addGroup .addBtn,
+.addGroup .more {
+    height: 100%;
+    color: var(--juejin-font-white);
+    background-color: var(--juejin-brand-1-normal);
+    border-radius: 3px;
+    transition: background-color .1s linear .05s;
+}
+
+.addGroup .addBtn {
+    padding: 0 1rem;
+    font-size: 1.167rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    white-space: nowrap;
+}
+
+.addGroup .more {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.667rem;
+    border-left: 1px solid hsla(0, 0%, 100%, .1);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-sizing: border-box;
+}
+
+.vipEntry {
+    .vipTitle {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+    }
+
+    .vipEntryImg {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .vipWords {
+        color: #86909c;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin-left: 4px;
+    }
+}
+
+.navItem.auth {
+    color: #007fff;
+    padding: 0 0 0 .833rem;
+}
+
+.loginButtonWrap {
+    position: relative;
+}
+
+.navItem .loginButton {
+    background: rgba(30, 128, 255, .05);
+    border: 1px solid rgba(30, 128, 255, .3);
+    border-radius: 4px;
+    padding: .3rem 1rem;
+    color: #007fff;
+    line-height: 1.9rem;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 2rem;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.loginButtonInner {
+    display: inline-block;
+}
+
+.loginButtonLine {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px;
+    background-color: #abcdff;
+    height: 12px;
+    width: 1px;
 }
